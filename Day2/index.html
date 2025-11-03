@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+</head>
+
+<body>
+    <!-- Goals: Forms , Tables , Semantic HTML (<header>, <section>, <footer>) -->
+
+    <header>
+        Forms | Tables | Semantic Tags
+    </header>
+
+    <main>
+
+        <section class="form">
+            <h3>Forms</h3>
+            <form action="" method="post">
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="Enter your name">
+                </p>
+
+                <p>
+                    <label for="profile">Profile</label>
+                    <input type="file" name="userprofile" id="userprofile" accept="image/*" required>
+                </p>
+
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter Your Email">
+                </p>
+
+                <p>
+                    <label for="password">Password</label>
+                    <input type="password" name="userpassword" id="password" placeholder="Enter your password">
+                </p>
+
+                <p>
+                    <label for="dob">DOB</label>
+                    <input type="date" name="userdob" placeholder="Enter Your Date of birth">
+                </p>
+
+                <p>
+                    <label for="country">Country</label>
+                    <select name="country" id="country" required>
+                        <option value="">Select Your Country</option>
+                        <option value="IN">India</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="gender">Gender:</label>
+                    <input type="radio">
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="female" id="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" name="nottosay" id="nottosay">
+                    <label for="nottosay">Prefer Not to Say</label>
+                </p>
+
+                <p>
+                    <label for="address">Address:</label><br>
+                    <textarea name="address" id="address"></textarea>
+                </p>
+
+                <p>
+                    <label for="resume">Upload Resume or CV</label>
+                    <input type="file" name="resume" id="resume" accept=".doc, .pdf, .docx">
+                </p>
+
+                <p>
+                    <input type="checkbox" name="terms" id="terms">
+                    <label for="terms">Accept Terms and Conditions</label>
+                </p>
+
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+        </section>
+
+
+        <section class="table">
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th>Sr.</th>
+                    <th>Name</th>
+                    <th>Roll No.</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Samiksha</td>
+                    <td>05</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Tanushree</td>
+                    <td>04</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Vaishnavi</td>
+                    <td>08</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Shruti</td>
+                    <td>26</td>
+                </tr>
+            </table>
+            <style>
+                table {
+                    border-collapse: collapse;
+                    /* removes space between cells */
+                    width: 100%;
+                }
+
+                th,
+                td {
+                    border: 1px solid black;
+                    /* border for each cell */
+                    padding: 10px;
+                    /* same as cellpadding */
+                    text-align: left;
+                }
+            </style>
+        </section>
+    
+    </main>
+
+    <footer>
+         <p>© 2025 Samiksha | Contact: samiksha@example.com</p>
+    </footer>
+</body>
+
+</html>
