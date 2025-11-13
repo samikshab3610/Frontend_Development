@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeShopLandingPage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn {
+            background: #f8f2f2;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            margin: 15px;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+        }
+
+        /* Navbar */
+        header {
+            background-color: #d38787;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 25px;
+        }
+
+        .logo {
+            /* background-color: bisque; */
+            padding: 10px;
+        }
+
+        nav {
+            padding: 10px;
+        }
+
+        nav a {
+            padding: 5px;
+            text-decoration: none;
+            margin-right: 50px;
+            color: black;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            background-color: #d38787;
+            padding: 20px;
+          margin: 10px;
+            border-radius: 15px;
+        }
+
+        /* About */
+        .about {
+            background-color: #d38787;
+            text-align: center;
+            padding: 20px;
+           margin: 10px;
+            border-radius: 15px;
+        }
+        .about button a {
+            text-decoration: none;
+            color: black;
+        }
+        .about p {
+            font-size: 25px;
+        }
+
+        /* Menue */
+        .menue {
+            background-color: #d38787;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .itemcard {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: 50px; */
+            background-color: #f8f5f2;
+        }
+        .menuitem {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 15px;
+        }
+        .card {
+            background-color: #fddcdc;
+            padding: 10px 20px;
+            width: 300px;
+            height: 150px;
+            border-radius: 10px;
+            list-style-type: none;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+            margin: 30px;
+        }
+        .card h4 {
+            font-size: 1.5rem;
+        }
+        .card li {
+            color: black;
+            margin: 6px 0;
+            font-size: 1.3rem;
+
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: #d38787;
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+        }
+        .testimonials h2 {
+            margin-bottom: 10px;
+        }
+        .testimonials h3 {
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+        .testimonials .box {
+            background-color: #fddcdc;
+            padding: 30px;
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        .testimonials .reviews {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .btn-shareexperience {
+            margin-top: 20px;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            background: #f8f2f2;
+            border-radius: 15px;
+        }
+
+        /* Offers */
+        .offers {
+            background-color: #d38787;
+            text-align: center;
+            padding: 12px;
+            margin: 10px;
+            border-radius: 25px;
+        }
+        .offers p {
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .offers .btn-offers {
+            background: #f8f2f2;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            margin-top: 25px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: #d38787;
+            text-align: center;
+            padding: 12px;
+            margin: 10px;
+            border-radius: 25px;
+        }
+        .contact>p {
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .contact a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+
+
+
+        /* Footer */
+        footer {
+            background-color: #d38787;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        footer p {
+            font-size: 25px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            CoffeeHaven
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="#Menue">Menue</a>
+            <a href="#AboutMe">About Us</a>
+            <a href="#Offers">Offers</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="Hero" class="hero">
+            <h1>Welcome to Coffee Haven</h1>
+            <h2>Freshly brewed coffee, warm vibes, and the perfect place to relax or work</h2>
+            <button class="btn cta-primary">Order Now!</button>
+            <button class="btn cta-primary">Visit Us Today!</button>
+            <h3>Open daily: 7 AM – 10 PM</h3>
+            <h3>☕ Fresh Coffee | 🥐 Delicious Snacks | 📶 Free Wi-Fi</h3>
+        </section>
+
+        <!-- Menue -->
+        <section id="Menue" class="menue">
+            <h1>“Our Menu”</h1>
+            <h2>From bold espresso shots to creamy lattes — every cup is brewed
+                with love and crafted to perfection</h2>
+
+            <div class="itemscard">
+                <div class="menuitem">
+                    <div class="card">
+                        <h4>A. Coffee Classics</h4>
+
+                        <li>Espresso – ₹90</li>
+                        <li>Cappuccino – ₹120</li>
+                        <li> Latte – ₹130</li>
+                        <li>Americano – ₹110</li>
+
+                    </div>
+
+                    <div class="card">
+                        <h4>B. Flavored Specials</h4>
+
+                        <li>Caramel Macchiato – ₹150</li>
+                        <li>Mocha – ₹140</li>
+                        <li>Hazelnut Latte – ₹155</li>
+                    </div>
+
+                    <div class="card">
+                        <h4>C. Refreshers & Snacks</h4>
+
+                        <li>Cold Brew – ₹130</li>
+                        <li>Iced Latte – ₹140</li>
+                        <li>Croissant – ₹80</li>
+                        <li>Chocolate Muffin – ₹90</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AboutMe -->
+        <section id="AboutMe" class="about">
+            <h1>Our Story</h1>
+            <p>At Coffee Haven, we believe every cup of coffee should feel like a warm hug.
+                From freshly roasted beansto handcrafted drinks, we bring a cozy, inviting space
+                where you can relax, work, or catch up with friends.</p>
+            <button class="btn"><a href="/">Explore Our Menu</a></button>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h1>Our Happy Customers</h1>
+            <h2>We’re more than just a coffee shop — we’re a part of our customers’
+                daily routine. Here’s what they say about their Coffee Haven experience.</h2>
+            <div class="reviews">
+                <p class="box">⭐️⭐️⭐️⭐️⭐️<br>
+                    Coffee Haven is my go-to spot every morning.
+                    The aroma, the ambiance, everything feels just perfect!”
+                    <br>– Priya Sharma
+                </p>
+                <p class="box">⭐️⭐️⭐️⭐️⭐️<br>
+                    “Their caramel macchiato is the best I’ve had in the city. Plus, the staff always greets with a
+                    smile.”
+                    <br>– Arjun Mehta
+                </p>
+                <p class="box">⭐️⭐️⭐️⭐️⭐️<br>
+                    “A peaceful place to work and sip great coffee. Love the cozy vibe and friendly baristas.”
+                    <br> – Sneha Kulkarni
+                </p>
+                <p class="box">⭐️⭐️⭐️⭐️<br>
+                    “Tried their cold brew last week — smooth, strong, and refreshing! Definitely coming back.”
+                    <br>– Rahul Patil
+                </p>
+            </div>
+            <button class="btn btn-shareexperience">Share Your Experiance</button>
+        </section>
+
+        
+        <!-- Offers -->
+        <section id="Offers" class="offers">
+            <h1>🎁 Special Offers Just for You </h1>
+            <h2>"We love rewarding our loyal customers..." </h2>
+            <p>☕ Buy 1 Get 1 Free | 🎫 Loyalty Program |
+                🍰 Combo Treats | 📱 Online Discount
+            </p>
+            <button class="btn btn-offers">Claim Your Offer</button>
+        </section>
+
+        <!-- Contact -->
+        <section id="Contact" class="contact">
+            <h1> 📞 Get in Touch </h1>
+            <h2>"We’d love to hear from you..." </h2>
+
+            <p> Address: Coffee Haven Café, MG Road, Pune </p>
+            <p> Phone: +91 98765 43210 </p>
+            <p> Email: coffeehaven@gmail.com </p>
+            <p> Hours: Mon–Sun: 7 AM–10 PM</p>
+
+            <button class="btn btn-map">See Us On Map</button>
+
+            <p>
+                <a href="/">Instagram</a> | <a href="/">Facebook</a> | <a href="/">Youtube</a> | <a href="/">Google
+                    Reviews</a>
+            </p>
+        </section>
+    </main>
+    <footer>
+
+        <h1>Coffee Haven</h1>
+        <h2> "Brewing warmth, one cup at a time." </h2>
+
+        <a href="#Home">Home </a> |
+        <a href="#AboutMe">About </a> |
+        <a href="#Menue">Menue </a> |
+        <a href="#Offers">Offers </a> |
+
+
+        <p>📍 Pune | ☎ +91 98765 43210 | ✉ coffeehaven@gmail.com</p>
+
+        <p> © 2025 Coffee Haven | Crafted with ❤️ and Coffee </p>
+
+    </footer>
+</body>
+
+</html>
