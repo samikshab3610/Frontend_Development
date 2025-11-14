@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5</title>
+</head>
+
+<body>
+    <!-- Goals: flexbox  (justify-content, align-items, flex-wrap, flex-direction, gap, alignself, flex) -->
+
+    <div class="parent">
+        <div class="box box1">Child1</div>
+        <div class="box box2">Child2</div>
+        <div class="box box3">Child3</div>
+        <div class="box box4">Child4</div>
+    </div>
+    <style>
+        .parent {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 5px;
+            height: 200px;
+        }
+        .box {
+            border: 1px solid black;
+            background-color: burlywood;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+    justify-content:
+
+    <h2>display flex</h2>
+    <div class="displayflex">
+        <div class="displayflexchild box1">Child1</div>
+        <div class="displayflexchild box2">Child2</div>
+        <div class="displayflexchild box3">Child3</div>
+        <div class="displayflexchild box4">Child4</div>
+    </div>
+    <style>
+        .displayflex {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 5px;
+            display: flex;
+        }
+
+        .displayflexchild {
+            border: 1px solid black;
+            background-color: burlywood;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+
+
+    <h2>Justify Content</h2>
+    <div class="justifycontent">
+        <div class="justifycontentchild box1">Child1</div>
+        <div class="justifycontentchild box2">Child2</div>
+        <div class="justifycontentchild box3">Child3</div>
+        <div class="justifycontentchild box4">Child4</div>
+    </div>
+    <style>
+        .justifycontent {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 5px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .justifycontentchild {
+            border: 1px solid black;
+            background-color: burlywood;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+
+    <h2>Align Items</h2>
+    <div class="alignitems">
+        <div class="alignitemschild box1">Child1</div>
+        <div class="alignitemschild box2">Child2</div>
+        <div class="alignitemschild box3">Child3</div>
+        <div class="alignitemschild box4">Child4</div>
+    </div>
+    <style>
+        .alignitems {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 5px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+        }
+
+        .alignitemschild {
+            border: 1px solid black;
+            background-color: burlywood;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+
+
+    <h2> flex direction </h2>
+    <div class="flexdirection">
+        <div class="flexdirectionchild box1">Child1</div>
+        <div class="flexdirectionchild box2">Child2</div>
+        <div class="flexdirectionchild box3">Child3</div>
+        <div class="flexdirectionchild box4">Child4</div>
+    </div>
+    <style>
+        .flexdirection {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 5px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flexdirectionchild {
+            border: 1px solid black;
+            background-color: burlywood;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+
+    <h2> Flex Wrap </h2>
+    <div class="flexwrap">
+        <div class="flexwrapchild box1">Child1</div>
+        <div class="flexwrapchild box2">Child2</div>
+        <div class="flexwrapchild box3">Child3</div>
+        <div class="flexwrapchild box4">Child4</div>
+    </div>
+    <style>
+        .flexwrap {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 5px;
+            height: 300px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flexwrapchild {
+            border: 1px solid black;
+            background-color: burlywood;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+
+    <h2> Gap </h2>
+    <div class="gap">
+        <div class="gapchild box1">Child1</div>
+        <div class="gapchild box2">Child2</div>
+        <div class="gapchild box3">Child3</div>
+        <div class="gapchild box4">Child4</div>
+    </div>
+    <style>
+        .gap {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 5px;
+            height: 300px;
+            display: flex;
+            gap: 50px;
+        }
+        .gapchild {
+            border: 1px solid black;
+            background-color: burlywood;
+            width: 500px;
+            text-align: center;
+        }
+    </style>
+
+    <h2> Align Self </h2>
+    <div class="alignself">
+        <div class="alignselfchild box1">Child1</div>
+        <div class="alignselfchild box2">Child2</div>
+        <div class="alignselfchild alignselfchild3">Child3</div>
+        <div class="alignselfchild box4">Child4</div>
+    </div>
+    <style>
+        .alignself {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 5px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+        }
+        .alignselfchild {
+            border: 1px solid black;
+            background-color: burlywood;
+            width: 500px;
+            margin: 10px;
+            text-align: center;
+        }
+        .alignselfchild3 {
+            align-self: flex-end;
+        }
+    </style>
+
+    <h2> Flex </h2>
+    <div class="flex">
+        <div class="flexchild box1">Child1</div>
+        <div class="flexchild box2">Child2</div>
+        <div class="flexchild flexchild3">Child3</div>
+        <div class="flexchild flexchild4">Child4</div>
+    </div>
+    <style>
+        .flex {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 5px;
+            height: 300px;
+            display: flex;
+        }
+        .flexchild {
+            border: 1px solid black;
+            background-color: burlywood;
+            width: 50px;
+            margin: 10px;
+            text-align: center;
+        }
+        .flexchild3 {
+            flex-grow: 1;
+        }
+        .flexchild4 {
+            flex-grow: 2;
+        }
+    </style>
+
+</body>
+
+</html>
