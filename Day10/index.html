@@ -11,13 +11,13 @@
             font-style: italic;
         }
 
-        span{
+        #span{
             background-color: antiquewhite;
             /* font-weight: 200; */
             font-style: italic;
         }
 
-        para{
+        #para{
             background-color: bisque;
             font-size: large;
         }
@@ -26,18 +26,34 @@
             background-color: aqua;
             color: red;
         }
+        #changecolor{
+            background-color: yellow;
+            color: green;
+        }
     </style>
 </head>
 <body>
-    <h1 id="heading">Hello</h1>
-    <span id="span">This is span</span>
+    <header id="header-title">
+    <h1 id="heading" class="headings">Hello</h1>
+    <h2 class="headings">This is another heading i.e Hello</h2>
+    <span id="span" class="spans">This is span</span>
 
+    </header> 
     <!-- Build -->
-    <p id="para">
+    <p id="para" class="paras">
         This is paragraph
     </p>
 
-    <button id="btn">This i just a button</button>
+    <ul id="list" class="lists">
+        <li class="list-items">Item 1</li>
+        <li class="list-items">Item 2</li>
+        <li class="list-items">Item 3</li>
+    </ul>
+
+    <button id="btn" class="btns">This i just a button</button>
+
+    <h1 id="changetext">Change the text dynamically</h1>
+    <h2 id="changecolor">Change color if the text is changed</h2>
 
     <script src="script.js"></script>
 </body>
