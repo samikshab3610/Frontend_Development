@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        :root {
+            --main-color: #5b5bf3;
+            --main-color-btn: #afaff5;
+
+            --red-color: #fa1c1c;
+            --red-color-btn: #f18181;
+
+            --pink-color: #f094e4;
+            --pink-color-btn: #f1bce9;
+
+            --green-color: #148a10;
+            --green-color-btn: #84ee8d;
+
+            --yellow-color: #f1ff33;
+            --yellow-color-btn: #f2f39e;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .counterappoutline {
+            width: 500px;
+            height: 200px;
+            margin: auto;
+            padding: 20px;
+            background-color: var(--main-color);
+            border: 2px solid black;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .counterapp {
+            display: flex;
+            cursor: pointer;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: var(--main-color-btn);
+            padding: 15px;
+            border: 2px solid black;
+            margin: 15px;
+            width: 100px;
+            font-size: 1.2rem;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        .instuction {
+            width: 250px;
+            text-align: center;
+        }
+
+        .colorchnager_outline {
+            border: 2px solid black;
+            border-radius: 15px;
+            margin: 20px;
+            padding: 20px;
+            background-color: beige;
+        }
+
+        .color {
+            border-radius: 25px;
+            width: 60px;
+            height: 25px;
+            text-align: center;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        .colorsbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #pink {
+            background-color: pink;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">Event Listener</h1>
+
+    <!-- color changer app -->
+    <div class="colorchnager_outline">
+        <h1>Change the color of counterapp with following color</h1>
+        <div class="colorsbox">
+            <div class="color" id="red"></div>
+            <div class="color" id="pink"></div>
+            <div class="color" id="green"></div>
+            <div class="color" id="yellow"></div>
+        </div>
+
+
+        <!-- counter app -->
+        <div class="counterappoutline">
+            <h2>Counter App</h2>
+            <div class="btn instuction" id="instuction">Click here for instruction</div>
+            <div class="counterapp">
+                <div class="btn" id="decre">-</div>
+                <div class="btn" id="value">0</div>
+                <div class="btn" id="incre">+</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    let btn = document.getElementById('instuction');
+    let value = document.getElementById('value');
+    let incre = document.getElementById('incre');
+    let decre = document.getElementById('decre');
+
+    // counter app
+    btn.addEventListener('click', (e) => {
+        alert("Button Activated To increment click + and for decrement click -");
+    }
+    );
+
+    let count = 0;
+
+    incre.addEventListener('click', (e) => {
+        count++;
+        value.innerText = count;
+    });
+
+    decre.addEventListener('click', (e) => {
+        count--;
+        value.innerText = count;
+    });
+
+    // Color changer
+    let root = document.documentElement;
+    let countercolor = document.querySelector('.counterappoutline');
+    let btns = document.querySelectorAll('.btn');
+    let color = document.getElementsByClassName('color');
+    let red = document.getElementById('red');
+    let pink = document.getElementById('pink');
+    let green = document.getElementById('green');
+    let yellow = document.getElementById('yellow');
+
+
+    function setTheme(theme) {
+    let colorBg = getComputedStyle(root).getPropertyValue(`--${theme}-color`);
+    let colorBtn = getComputedStyle(root).getPropertyValue(`--${theme}-color-btn`);
+
+    countercolor.style.backgroundColor = colorBg;
+
+    btns.forEach(btn => {
+        btn.style.backgroundColor = colorBtn;
+    });    
+    }
+
+    red.addEventListener('click', () => setTheme("red"));
+    pink.addEventListener('click', () => setTheme("pink"));
+    green.addEventListener('click', () => setTheme("green"));
+    yellow.addEventListener('click', () => setTheme("yellow"));
+    
+</script>
+
+</html>
