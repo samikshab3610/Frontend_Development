@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        form {
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+            width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="name">Name: </label>
+        <input type="text" id="name" autocomplete="name" placeholder="Enter Your Name">
+        <p id="NameError"></p>
+
+        <label for="email">Email: </label>
+        <input type="text" id="email" autocomplete="on" placeholder="Enter Email">
+        <p id="EmailError"></p>
+
+        <label for="password">Password: </label>
+        <input type="password" id="password" placeholder="Enter Password">
+        <p id="PasswordError"></p>
+
+        <label for="number">Mobile Number: </label>
+        <input type="text" id="number" autocomplete="off" placeholder="Enter Mobile Number">
+        <p id="NumberError"></p>
+
+        <button id="submit">Submit</button>
+    </form>
+</body>
+
+<script>
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let btn = document.getElementById('submit');
+    let NameError = document.getElementById('NameError');
+    let EmailError = document.getElementById('EmailError');
+    let PasswordError = document.getElementById('PasswordError');
+    let phone = document.getElementById('number');
+    let NumberError = document.getElementById('NumberError');
+
+
+    // name requird check
+    // btn.addEventListener('click', (e) => {
+    //     e.preventDefault();
+
+    //     if (name.value.trim() === "") {
+
+    //         NameError.innerText = "Name is required";
+    //         alert("Name is required");
+    //     } else {
+    //         NameError.innerText = " ";
+    //         console.log("Valid Input");
+    //         alert('name valid');
+    //     }
+    // });
+
+    // // email format check
+    // btn.addEventListener('click', function () {
+    //     let value = email.value.trim();
+
+    //     if (value === "") {
+    //         EmailError.innerText = "Email is required";
+    //         alert("Email is required");
+    //     }
+
+    //     if (!value.includes("@") || !value.includes(".")) {
+    //         EmailError.innerText = "Enter Valid email";
+    //         alert("Enter Valid email");
+    //     }
+    // });
+
+    // // length checker
+    // btn.addEventListener('click', function () {
+    //     let value = password.value.trim();
+
+    //     if (value.length < 6) {
+    //         PasswordError.innerText = "Password must be at least 6 characters";
+    //         alert("Enter valid Password");
+    //         return;
+    //     }
+
+    //     PasswordError.innerText = '';
+    //     console.log("Valid Password");
+    // });
+
+
+    // // Regex Validation for Mobile no.
+    // const phonePattern = /^[0-9]{10}$/;
+
+    // btn.addEventListener('click', () => {
+    //     const value = phone.value.trim();
+
+    //     if (value === '') {
+    //         NumberError.innerText = "Phone number is required";
+    //         return;
+    //     }
+
+    //     if (!phonePattern.test(value)) {
+    //         NumberError.innerText = "Enter a valid 10 digit number";
+    //         return;
+    //     }
+
+    //     NumberError.innerText = "Valid number";
+    //     console.log('Valid');
+    // });
+
+
+
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+
+        // name requird check
+        if (name.value.trim() === "") {
+            NameError.innerText = "Name is required";
+        } else {
+            NameError.innerText = " ";
+            console.log("Valid Input");
+        }
+
+
+        // email format check
+
+        let emailvalue = email.value.trim();
+        if (emailvalue === "") {
+            EmailError.innerText = "Email is required";
+        }
+
+        if (!emailvalue.includes("@") || !emailvalue.includes(".")) {
+            EmailError.innerText = "Enter Valid email";
+        }
+
+        // length checker
+        let passvalue = password.value.trim();
+        if (passvalue.length < 6) {
+            PasswordError.innerText = "Password must be at least 6 characters";
+            return;
+        } else {
+            PasswordError.innerText = '';
+            console.log("Valid Password");
+        }
+
+
+        // Regex Validation for Mobile no.
+        const phonePattern = /^[0-9]{10}$/;
+        const phonevalue = phone.value.trim();
+
+        if (phonevalue === '') {
+            NumberError.innerText = "Phone number is required";
+            return;
+        }
+
+        if (!phonePattern.test(value)) {
+            NumberError.innerText = "Enter a valid 10 digit number";
+            return;
+        } else {
+            NumberError.innerText = "Valid number";
+            console.log('Valid');
+        }
+
+        alert("Form submitted successfully!");
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
