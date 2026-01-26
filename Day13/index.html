@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    <h2>Important Methods</h2>
+    <div class="box">
+        <input type="text" id="addname" placeholder="Enter Name">
+        <button id="btn" onclick="SaveName()">Add Name</button>
+        <div id="allnames">
+            <ul id="names">
+                
+            </ul>
+        </div>
+
+        <input type="text" id="deletename" placeholder="Name">
+        <button id="delete" onclick="deleteName()">Delete</button>
+    </div>
+</body>
+<script>
+let addname = document.getElementById('addname');
+let ul = document.getElementById('names');
+
+let username = JSON.parse(localStorage.getItem('username')) || [];
+
+function SaveName() {
+    let name = addname.value.trim();
+
+    if(name === '') return;
+
+    username.push(name);
+    localStorage.setItem('username', JSON.stringify(username));
+    
+    addname.value='';
+
+    displayNames();
+}
+
+
+
+function displayNames() {
+    
+    let ul = document.getElementById('names');
+    ul.innerHTML = '';
+
+    username.forEach(name => {
+        let li = document.createElement('li');
+        li.textContent = name;
+
+        ul.appendChild(li);
+    });
+}
+
+displayNames();
+
+let namedelete = document.getElementById('deletename');
+
+function deleteName() {
+
+    let nametodelete = namedelete.value.trim();
+
+    if (nametodelete == '') return   ;
+
+    let index = username.indexOf(nametodelete);
+
+    if(index === -1){
+        alert("name not found");
+        return;
+    }
+
+    username.splice(index, 1);
+    localStorage.setItem('username', JSON.stringify(username));
+
+    nametodelete.value = '';
+
+    displayNames();
+
+}
+
+
+
+//Basic
+// let username = [];
+// function SaveName() {
+//     let name = addname.value.trim();
+
+//     if(name === "") return;
+
+//     username.push(name);
+//     addname.value = '';
+
+//     displayNames();
+// }
+
+// function displayNames() {
+//     ul.innerText = '';
+
+//     username.forEach((name) => {
+//         let li = document.createElement('li');
+//         li.textContent = name;
+//         ul.appendChild(li);
+//     });
+    
+// }
+
+
+</script>
+</html>
